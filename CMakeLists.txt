@@ -2,7 +2,6 @@ cmake_minimum_required(VERSION 3.28...3.30)
 
 # Change this to the name of your project
 project(RearSilver-Plugin-Template VERSION 0.0.1)
-add_library(${CMAKE_PROJECT_NAME} MODULE)
 
 # author information
 set(plugin_author "RearSilver")
@@ -17,8 +16,6 @@ option(ENABLE_QT "Use Qt functionality" OFF)
 include(compilerconfig)
 include(defaults)
 include(helpers)
-
-add_library(${CMAKE_PROJECT_NAME} MODULE)
 
 find_package(libobs REQUIRED)
 target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE OBS::libobs)
